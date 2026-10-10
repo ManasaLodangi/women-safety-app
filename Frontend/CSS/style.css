@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #833471;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e84118;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #ff4757;
+    text-decoration: none;
+}
+.dashboard {
+    width: 400px;
+    text-align: left;
+}
+
+.dashboard h2, .dashboard h3 {
+    text-align: center;
+    color: #833471;
+}
+
+.sos-button {
+    background: #ff0000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 15px 0;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(255,0,0,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,0,0,0); }
+}
+
+#contactsList {
+    list-style: none;
+    margin: 15px 0;
+}
+
+#contactsList li {
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#logoutBtn {
+    background: #57606f;
+}
+
+#logoutBtn:hover {
+    background: #2f3542;
+}
+.sos-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
+}
+.contacts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 5px 0;
+}
+
+.trash-icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.3;
+    padding: 5px 10px;
+    width: auto;
+}
+
+.trash-icon-btn.active {
+    opacity: 1;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-item span {
+    cursor: pointer;
+    flex: 1;
+}
+
+.contact-item input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+#whatsappButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.whatsapp-send-btn {
+    background: #25D366;
+    color: white;
+    font-weight: bold;
+}
+
+.whatsapp-send-btn:hover {
+    background: #1da851;
+}
+body {
+    background-image: url("../images/hero-girl.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
