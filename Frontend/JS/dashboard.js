@@ -12,7 +12,7 @@ let selectedContacts = new Set();
 
 // Load emergency contacts
 async function loadContacts() {
-    const res = await fetch(`http://localhost:8081/api/contacts/user/${currentUser.id}`);
+    const res = await fetch(`https://women-safety-app-1-rqy8.onrender.com/api/contacts/user/${currentUser.id}`);
     const contacts = await res.json();
 
     const list = document.getElementById("contactsList");
@@ -64,7 +64,7 @@ document.getElementById("deleteSelectedBtn").addEventListener("click", async fun
     if (selectedContacts.size === 0) return;
 
     for (const id of selectedContacts) {
-        await fetch(`http://localhost:8081/api/contacts/${id}`, { method: "DELETE" });
+        await fetch(`https://women-safety-app-1-rqy8.onrender.com/api/contacts/${id}`, { method: "DELETE" });
     }
 
     selectedContacts.clear();
@@ -85,7 +85,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
         relationship: document.getElementById("relationship").value
     };
 
-    await fetch("http://localhost:8081/api/contacts/add", {
+    await fetch("https://women-safety-app-1-rqy8.onrender.com/api/contacts/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -113,13 +113,13 @@ document.getElementById("sosBtn").addEventListener("click", function() {
             longitude: lng
         };
 
-        await fetch("http://localhost:8081/api/sos/trigger", {
+        await fetch("https://women-safety-app-1-rqy8.onrender.com/api/sos/trigger", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         });
 
-        const res = await fetch(`http://localhost:8081/api/contacts/user/${currentUser.id}`);
+        const res = await fetch(`https://women-safety-app-1-rqy8.onrender.com/api/contacts/user/${currentUser.id}`);
         const contacts = await res.json();
 
         if (contacts.length === 0) {

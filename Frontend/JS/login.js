@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const password = document.getElementById("password").value;
 
     try {
-        const res = await fetch("http://localhost:8081/api/users/login", {
+        const res = await fetch("https://women-safety-app-1-rqy8.onrender.com/api/users/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })

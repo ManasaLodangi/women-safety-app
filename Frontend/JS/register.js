@@ -9,7 +9,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     };
 
     try {
-        const res = await fetch("http://localhost:8081/api/users/register", {
+        const res = await fetch("https://women-safety-app-1-rqy8.onrender.com/api/users/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
